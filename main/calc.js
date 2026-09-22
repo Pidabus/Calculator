@@ -57,10 +57,8 @@ function calculator() {
         }
     }
 
-    inputs.addEventListener("click", (e) => {
-        // if(display.textContent != "") {
-        //     display.textContent = "";
-        // }
+    inputs.addEventListener("click", (e) => { 
+        if (e.target.tagName != "BUTTON") return;
 
         let text = e.target.textContent;
 
@@ -69,12 +67,12 @@ function calculator() {
     });
 
     inputs_operators.addEventListener("click", (e) => {
+        if (e.target.tagName != "BUTTON") return;
+
         let operand = e.target.textContent;
 
         var1 = Number(display.textContent);
         operator = operand;
-
-        display.textContent += " " + operand + " ";
 
         display.textContent = "";
     });
