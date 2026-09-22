@@ -66,7 +66,7 @@ function calculator() {
     equalButton.addEventListener("click", (e) => {
         let text = display.textContent;
 
-        var2 = text;
+        var2 = Number(text);
 
         display.textContent = "";
 
