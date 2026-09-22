@@ -72,6 +72,8 @@ function calculator() {
 
         let result = operate(operator, var1, var2);
 
+        Number(result.toFixed(1));
+
         display.textContent = result;
         })
 
