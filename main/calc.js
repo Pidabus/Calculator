@@ -44,9 +44,9 @@ function calculator() {
     }
 
     inputs.addEventListener("click", (e) => {
-        if(display.textContent != "") {
-            display.textContent = "";
-        }
+        // if(display.textContent != "") {
+        //     display.textContent = "";
+        // }
 
         let text = e.target.textContent;
 
@@ -61,6 +61,8 @@ function calculator() {
         operator = operand;
 
         display.textContent += " " + operand + " ";
+    
+        display.textContent = "";
     })
 
     equalButton.addEventListener("click", (e) => {
@@ -72,10 +74,11 @@ function calculator() {
 
         let result = operate(operator, var1, var2);
 
-        Number(result.toFixed(1));
+        // result.toFixed(1);
 
-        display.textContent = result;
-        })
+        display.textContent = result.toFixed(1);
+
+        });
 
     clearButton.addEventListener("click", (e) => {
         display.textContent = "";
