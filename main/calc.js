@@ -92,6 +92,9 @@ function calculator() {
     
     clearButton.addEventListener("click", (e) => {
         display.textContent = "";
+        var1 = null;
+        var2 = null;
+        operator = null;
     });
 
 }
