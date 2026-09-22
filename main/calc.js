@@ -11,7 +11,18 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
+    if (b === 0) return "MATH ERROR";
     return a / b;
+}
+
+function verifyResult (result) {
+    if (typeof result === "string") {
+        alert("MATH ERROR!");
+    }
+    if (result % 1 === 0) {
+        result.toFixed(1);
+    }
+    return result;
 }
 
 function calculator() {
@@ -52,7 +63,7 @@ function calculator() {
 
         display.textContent += text;
 
-    })
+    });
 
     inputs_operators.addEventListener("click", (e) => {
         let operand = e.target.textContent;
@@ -63,7 +74,7 @@ function calculator() {
         display.textContent += " " + operand + " ";
     
         display.textContent = "";
-    })
+    });
 
     equalButton.addEventListener("click", (e) => {
         let text = display.textContent;
@@ -74,16 +85,14 @@ function calculator() {
 
         let result = operate(operator, var1, var2);
 
-        // result.toFixed(1);
-
-        display.textContent = result.toFixed(1);
-
+        display.text = verifyResult(result);
         });
+
+        
 
     clearButton.addEventListener("click", (e) => {
         display.textContent = "";
-    })
+    });
 
-};
-
+}
 calculator();
