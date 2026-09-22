@@ -28,8 +28,13 @@ function calculator() {
     const display = document.querySelector(".display");
     const clearButton = document.querySelector(".button");
     const inputs_operators = document.querySelector(".operators");
+    const equalButton = document.querySelector(".equals");
 
     inputs.addEventListener("click", (e) => {
+        if(display.textContent != "") {
+            display.textContent = "";
+        }
+
         let text = e.target.textContent;
 
         display.textContent += text;
