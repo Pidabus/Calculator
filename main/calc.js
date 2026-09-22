@@ -1,36 +1,54 @@
-function add (a, b) {
-   return a + b; 
+function add(a, b) {
+    return a + b;
 }
 
-function subtract (a, b) {
+function subtract(a, b) {
     return a - b;
 }
 
-function multiply (a, b) {
+function multiply(a, b) {
     return a * b;
 }
 
-function divide (a, b) {
-    return a/b;
+function divide(a, b) {
+    return a / b;
 }
 
-let var1 = null;
-let var2 = null;
-let operator = null;
+function calculator() {
 
-function operate (operator, var1, var2) {
-    return operator(var1, var2);
-}
+    let var1 = null;
+    let var2 = null;
+    let operator = null;
 
-const inputs = document.querySelector(".inputs");
-const display = document.querySelector(".display");
-
-inputs.addEventListener("click", (e) => {
-    let value = e.target.textContent;
-
-    if (value === CLEAR) {
-        display.textContent = "";
+    function operate(operator, var1, var2) {
+        return operator(var1, var2);
     }
 
-    display.textContent = value;
-})
+    const inputs = document.querySelector(".inputs");
+    const display = document.querySelector(".display");
+    const clearButton = document.querySelector(".button");
+    const inputs_operators = document.querySelector(".operators");
+
+    inputs.addEventListener("click", (e) => {
+        let text = e.target.textContent;
+
+        display.textContent += text;
+
+    })
+
+    inputs_operators.addEventListener("click", (e) => {
+        let operand = e.target.textContent;
+
+        var1 = display.textContent;
+        operator = operand;
+
+        display.textContent += " " + operand + " ";
+    })
+
+    clearButton.addEventListener("click", (e) => {
+        display.textContent = "";
+    })
+
+};
+
+calculator();

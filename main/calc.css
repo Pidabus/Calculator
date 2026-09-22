@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+.container p  {
+    width: 200px;
+    height: 20px;      
+    border: 2px solid black;
+}
