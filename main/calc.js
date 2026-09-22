@@ -11,7 +11,10 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    if (b === 0) return "MATH ERROR";
+    if (b===0) {
+        alert("MATH ERROR");
+        return "";
+    }
     return a / b;
 }
 
@@ -72,7 +75,7 @@ function calculator() {
         operator = operand;
 
         display.textContent += " " + operand + " ";
-    
+
         display.textContent = "";
     });
 
@@ -85,11 +88,10 @@ function calculator() {
 
         let result = operate(operator, var1, var2);
 
-        display.text = verifyResult(result);
-        });
+        display.textContent = result.toFixed(1);
 
-        
-
+    });
+    
     clearButton.addEventListener("click", (e) => {
         display.textContent = "";
     });
