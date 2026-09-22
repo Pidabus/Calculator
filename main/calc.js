@@ -13,19 +13,9 @@ function multiply(a, b) {
 function divide(a, b) {
     if (b===0) {
         alert("MATH ERROR");
-        return "";
+        return 0;
     }
     return a / b;
-}
-
-function verifyResult (result) {
-    if (typeof result === "string") {
-        alert("MATH ERROR!");
-    }
-    if (result % 1 === 0) {
-        result.toFixed(1);
-    }
-    return result;
 }
 
 function calculator() {
@@ -87,7 +77,6 @@ function calculator() {
         let result = operate(operator, var1, var2);
 
         display.textContent = result.toFixed(1);
-
     });
     
     clearButton.addEventListener("click", (e) => {
