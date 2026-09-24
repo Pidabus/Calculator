@@ -1,8 +1,10 @@
+:root {
+    --main-color: red;
+}
+
 * {
     box-sizing: border-box;
-    /* color: rgb(0, 42, 255); */
-    background: linear-gradient(90deg, yellow , red);
-
+    color: var(--main-color);
 }
 
 .container p {
