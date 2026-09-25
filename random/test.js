@@ -6,6 +6,7 @@ MyApp.calculator = {
         return a + b;
     },
     subtract: (a, b) => a - b, // ==> don't put ; after the return value for arrow functions.
+                                // ==> don't use  arrow functions in methods, they don't have proper this. functionality.
 };
 
 console.log(MyApp.calculator.add);
