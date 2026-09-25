@@ -21,4 +21,8 @@ const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "not read yet");
 // console.log(Object.getPrototypeOf(Book.prototype) === Object.prototype)
 // console.log(thehobbit.valueof());
 
-// console.log(Book.prototype); ==> By default, the .prototype holds an empty object.
+// Book.prototype.sayHello = function() {
+//   console.log("Hello, I'm a player!");
+// };
+
+// console.log(Book.prototype); 
