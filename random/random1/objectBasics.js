@@ -20,3 +20,5 @@ let obj1 = {
 // for (let prop in obj1) {
 //     console.log(`Property: ${prop} - Value: ${obj1[prop]}`); // Remember to use [prop] for computed properties.
 // }
+
+console.log(Object.values(obj1));
