@@ -8,7 +8,7 @@ const car = {
   // a method is just a function assigned to a property
   applyDiscount: function(discountPercentage) {
     const multiplier = 1 - discountPercentage / 100;
-    car.priceUSD *= multiplier;
+    car.priceUSD *= multiplier; // using the object's name directly instead of this also works
   },
   // shorthand way to add a method to an object literal
   getSummary() {
