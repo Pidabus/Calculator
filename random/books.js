@@ -15,4 +15,8 @@ function Book(title, author, pages, haveRead) {
 }
 
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "not read yet");
-console.log(theHobbit.info());
+// console.log(theHobbit.info());
+
+console.log(Object.getPrototypeOf(theHobbit) === Book.prototype);
+console.log(Object.getPrototypeOf(Book.prototype) === Object.prototype)
+console.log(theHobbit.valueOf());
